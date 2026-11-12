@@ -3,7 +3,7 @@
 // SLUG: o endereço dele na AgendaIG (agendaig.com/<slug>). Vazio = ainda sem agenda.
 const AGENDAIG = {
   base: "https://agendaig.com",
-  slug: "aulas-em-alemao",
+  slug: "aulascomolaf",
   // Chave pública (anon) da AgendaIG: a mesma que a página de reservas usa no navegador.
   supabaseUrl: "https://ktanbezgduvoqqekzstv.supabase.co",
   anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0YW5iZXpnZHV2b3FxZWt6c3R2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI2NjUzNTAsImV4cCI6MjA5ODI0MTM1MH0.vC49RYNue-gFeV1zX4Aatfb4s-f2EH2WyS7Lrcd1IQM",

@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=1794508810">
+  <link rel="stylesheet" href="../styles.css?v=1794509189">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -360,17 +360,29 @@
     <!-- CTA -->
     <section class="cta" id="marcar" aria-labelledby="cta-title">
       <div class="wrap cta__in" data-reveal>
-        <h2 id="cta-title"><span data-lang="en">What's your goal?</span></h2>
-        <p><span data-lang="en">Pick one and see the open times.</span></p>
-        <fieldset class="goals">
-          <legend class="sr"><span data-lang="en">Goal</span></legend>
-          <label><input type="radio" name="goal" value="work" checked><span><span data-lang="en">Work</span></span></label>
-          <label><input type="radio" name="goal" value="life"><span><span data-lang="en">Live</span></span></label>
-          <label><input type="radio" name="goal" value="start"><span><span data-lang="en">Start from zero</span></span></label>
-        </fieldset>
-        <div class="cta__actions">
-          <a class="btn btn--light" id="agenda-link" href="https://agendaig.com" target="_blank" rel="noopener"><span data-lang="en">See times and book</span></a>
-          <a class="btn btn--line" id="whatsapp-link" href="https://wa.me/" target="_blank" rel="noopener"><span data-lang="en">Ask on WhatsApp</span></a>
+        <div class="cta__pick">
+          <p class="cta__eyebrow"><span data-lang="en">First lesson</span></p>
+          <h2 id="cta-title"><span data-lang="en">What's your goal?</span></h2>
+          <p class="cta__lead"><span data-lang="en">Pick one and see the path that fits you best.</span></p>
+          <fieldset class="goals">
+            <legend class="sr"><span data-lang="en">Goal</span></legend>
+            <label><input type="radio" name="goal" value="work" checked><span><span data-lang="en">Work</span></span></label>
+            <label><input type="radio" name="goal" value="life"><span><span data-lang="en">Live</span></span></label>
+            <label><input type="radio" name="goal" value="start"><span><span data-lang="en">Start from zero</span></span></label>
+          </fieldset>
+          <p class="cta__track" id="cta-track" aria-live="polite"></p>
+        </div>
+        <div class="cta__how">
+          <h3><span data-lang="en">How it works</span></h3>
+          <ol class="cta__steps">
+            <li><span data-lang="en">Choose the lesson and a time that suits you in the online calendar.</span></li>
+            <li><span data-lang="en">Olaf confirms that time or arranges another one with you.</span></li>
+            <li><span data-lang="en">A 60-minute lesson, online or in Vila Nova de Gaia, next to Porto.</span></li>
+          </ol>
+          <div class="cta__actions">
+            <a class="btn btn--light" id="agenda-link" href="https://agendaig.com" target="_blank" rel="noopener"><span data-lang="en">Pick a time and book</span></a>
+            <a class="btn btn--line" id="whatsapp-link" href="https://wa.me/" target="_blank" rel="noopener"><span data-lang="en">Ask on WhatsApp</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -387,6 +399,6 @@
 
   <a class="float-cta booking-link" href="#marcar"><span data-lang="en">Book a lesson</span></a>
 
-  <script src="../script.js?v=1794508810"></script>
+  <script src="../script.js?v=1794509189"></script>
 </body>
 </html>

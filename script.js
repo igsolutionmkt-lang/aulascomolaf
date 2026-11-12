@@ -93,6 +93,8 @@ function renderLesson(animate) {
     document.getElementById("phrase-target").textContent = l.target;
     document.getElementById("phrase-explanation").textContent = c.explanation;
     document.getElementById("phrase-track").textContent = c.track;
+    const ctaTrack = document.getElementById("cta-track");
+    if (ctaTrack) ctaTrack.textContent = c.track;
     sheet.classList.remove("is-swapping");
   };
   if (animate && !reduceMotion) {

@@ -432,3 +432,14 @@ a { color: inherit; }
   .js [data-reveal] { opacity: 1; transform: none; }
   .lvl__bar span { width: var(--de); }
 }
+
+/* política de privacidade */
+.legal { max-width: 760px; padding: 3rem 0 5rem; }
+.legal__top { display: flex; justify-content: space-between; gap: 1rem; font-size: var(--fs-small); font-weight: 600; margin: 0 0 2.5rem; }
+.legal h1 { font-size: var(--fs-h2); margin-bottom: .6rem; }
+.legal__date { font-size: var(--fs-small); color: var(--ink-2); margin: 0 0 1.5rem; }
+.legal__lead { font-size: var(--fs-lead); margin: 0 0 2rem; }
+.legal h2 { font-size: var(--fs-h3); margin: 2.2rem 0 .7rem; }
+.legal p, .legal li { color: var(--ink-2); line-height: 1.65; }
+.legal ul { padding-left: 1.2rem; display: grid; gap: .4rem; }
+.legal a { text-decoration-color: var(--gold); text-underline-offset: 3px; }

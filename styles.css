@@ -350,6 +350,7 @@ a { color: inherit; }
 .foot__in { display: grid; gap: .5rem; text-align: center; color: var(--ink-2); }
 .foot__bye { font: 800 clamp(2rem, 3vw, 2.6rem)/1 var(--display); color: var(--ink); margin-bottom: .4rem; }
 .foot__small { font-size: var(--fs-small); }
+.foot__addr a { color: var(--ink); font-weight: 600; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 
 /* botão fixo no telemóvel */
 .float-cta { display: none; }

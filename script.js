@@ -115,22 +115,31 @@ document.querySelectorAll("[data-goal]").forEach((b) => b.addEventListener("clic
 document.querySelectorAll('input[name="goal"]').forEach((r) => r.addEventListener("change", () => setGoal(r.value, false)));
 document.querySelectorAll("[data-goal-link]").forEach((a) => a.addEventListener("click", () => setGoal(a.dataset.goalLink, false)));
 
-/* ouvir em alemão (voz do navegador) */
+/* ouvir em alemão: ficheiro gravado (assets/audio/<objetivo>.mp3); a voz do
+   navegador só entra se o ficheiro falhar, porque muitos aparelhos não têm voz
+   alemã e o iPhone em silêncio cala-a */
 const listen = document.getElementById("listen");
-if (!("speechSynthesis" in window)) {
-  listen.hidden = true;
-} else {
-  listen.addEventListener("click", () => {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(lessons[goal].target);
-    u.lang = "de-DE";
-    u.rate = 0.85;
-    const voice = speechSynthesis.getVoices().find((v) => v.lang && v.lang.toLowerCase().startsWith("de"));
-    if (voice) u.voice = voice;
-    u.onstart = () => listen.classList.add("is-playing");
-    u.onend = u.onerror = () => listen.classList.remove("is-playing");
-    speechSynthesis.speak(u);
-  });
+const audioBase = document.querySelector('script[src*="script.js"]').src.replace(/script\.js.*$/, "assets/audio/");
+const player = new Audio();
+player.onplay = () => listen.classList.add("is-playing");
+player.onended = player.onpause = () => listen.classList.remove("is-playing");
+listen.addEventListener("click", () => {
+  player.pause();
+  player.src = audioBase + goal + ".mp3";
+  player.play().catch(speakFallback);
+});
+function speakFallback() {
+  listen.classList.remove("is-playing");
+  if (!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(lessons[goal].target);
+  u.lang = "de-DE";
+  u.rate = 0.85;
+  const voice = speechSynthesis.getVoices().find((v) => v.lang && v.lang.toLowerCase().startsWith("de"));
+  if (voice) u.voice = voice;
+  u.onstart = () => listen.classList.add("is-playing");
+  u.onend = u.onerror = () => listen.classList.remove("is-playing");
+  speechSynthesis.speak(u);
 }
 
 /* ---------- cartão PT → DE do topo ---------- */
